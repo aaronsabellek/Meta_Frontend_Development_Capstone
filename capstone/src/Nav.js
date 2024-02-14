@@ -1,7 +1,9 @@
+import logo from './images/Logo.svg';
+
 function Nav(props) {
     return (
         <nav>
-            <img src="../images/Logo.png" alt="Little Lemon Logo" />
+            <img src={logo} alt="Little Lemon Logo" />
         </nav>
     )
 }
