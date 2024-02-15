@@ -3,6 +3,7 @@ import logo from './images/Logo.svg';
 function Nav(props) {
     return (
         <nav class="flexbox">
+            <div class="content">
             <a href="Home">
                 <img src={logo} alt="Little Lemon Logo" />
             </a>
@@ -14,6 +15,7 @@ function Nav(props) {
                 <li><a href="Order online">Order online</a></li>
                 <li><a href="Login">Login</a></li>
             </ul>
+            </div>
         </nav>
     )
 }

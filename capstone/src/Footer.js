@@ -3,6 +3,7 @@ import logo from './images/Logo_big.png';
 function Footer(props) {
     return (
         <footer>
+            <div class="content">
             <img src={logo} alt="Little Lemon Logo" height="200" width="113" />
             <ul>
                 <li><a href="Home">Home</a></li>
@@ -32,6 +33,7 @@ function Footer(props) {
                     </a>
                 </li>
             </ul>
+            </div>
         </footer>
     )
 }
