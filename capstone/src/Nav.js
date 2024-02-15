@@ -2,11 +2,11 @@ import logo from './images/Logo.svg';
 
 function Nav(props) {
     return (
-        <nav>
+        <nav class="flexbox">
             <a href="Home">
                 <img src={logo} alt="Little Lemon Logo" />
             </a>
-            <ul id="navigation">
+            <ul id="navigation" class="fullwidth">
                 <li><a href="Home">Home</a></li>
                 <li><a href="About">About</a></li>
                 <li><a href="Menu">Menu</a></li>
