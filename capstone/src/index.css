@@ -31,6 +31,10 @@ code {
   background-color: #EDEFEE;
 }
 
+.bg-yellow {
+  background-color: #F4CE14;
+}
+
 h1 {
   font-size: 64px;
 }
@@ -141,16 +145,16 @@ main button {
 }
 
 #about {
-  color: #495E57;
+  color: white;
 }
 
 #about h1 {
-  color: #495E57;
+  color: #F4CE14;
 }
 
 #about h2 {
   margin-top: -50px;
-  color: #F4CE14;
+  color: white;
 }
 
 .half_screen {
@@ -272,4 +276,23 @@ footer li {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.testimonial_frame {
+  height: 350px;
+  width: 180px;
+  background-color: #EDEFEE;
+  color: #495E57;
+  padding: 10px 10px 10px 10px;
+}
+
+.testimonial_image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: grey;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }

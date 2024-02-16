@@ -2,7 +2,7 @@ import mario_adrian_b from './images/Mario_Adrian_b.jpg';
 
 function About(props) {
     return (
-        <div class="bg-light_green">
+        <div class="bg-green">
             <div class="content">
                 <div class="wrap_justify" id="about">
                     <div class="half_screen" id="first_block">
