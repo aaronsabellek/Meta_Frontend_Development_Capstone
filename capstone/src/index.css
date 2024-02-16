@@ -44,6 +44,8 @@ ul {
 
 nav {
   margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -96,11 +98,22 @@ main h1 {
   color: #F4CE14;
 }
 
+main h2 {
+  margin-top: -50px;
+}
+
+main p {
+  line-height: 1.5;
+}
+
 main button {
   background-color: #F4CE14;
   color: black;
-  padding: 10px;
+  font-weight: 550;
+  padding: 12px;
   border-radius: 10px;
+  border: none;
+  margin-top: 20px;
 }
 
 main img {
@@ -108,15 +121,14 @@ main img {
   height: 300px;
   min-width: 250px;
   object-fit: cover;
-  border-radius: 15px;
-  margin-top: 15px;
+  border-radius: 10px;
 }
 
 #first_block {
-  /*max-width: 66%;*/
+
   @media (min-width: 851px) {
     min-width: 500px;
-    max-width: 66%;
+    max-width: 50%;
   }
   @media (max-width: 850px) {
     width: 50%;
@@ -127,6 +139,8 @@ main img {
 }
 
 footer {
+  height: 100vh;
+  padding-right:340px;
   background-color: #EDEFEE;
   display: flex;
   flex-wrap: wrap;
@@ -148,7 +162,7 @@ footer a:hover {
 }
 
 footer img {
-  margin: 20px 0px 20px 0px;
+  margin: 20px 20px 20px 20px;
 }
 
 footer h5 {
@@ -156,6 +170,10 @@ footer h5 {
   margin-bottom: 12px;
 }
 
+footer ul {
+  margin-left: -20px;
+}
+
 footer li {
-  margin: 5px;
+  margin-top: 5px;
 }
