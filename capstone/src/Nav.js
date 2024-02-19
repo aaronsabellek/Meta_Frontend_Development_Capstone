@@ -6,9 +6,9 @@ function Nav(props) {
     return (
         <nav>
             <div class="content header_div">
-                <a href="Home" id="home_logo_link">
+                <Link to="/">
                     <img src={logo} alt="Little Lemon Logo" />
-                </a>
+                </Link>
                 <input type="checkbox" id="navigation_checkbox" />
                 <label for="navigation_checkbox" id="navigation_label" title="Navigation öffnen">
                     <img src={menu_icon} id="menu_icon" alt="Menu icon" />

@@ -1,4 +1,7 @@
 import logo from './images/Logo_big.png';
+import fb_logo from './images/facebook.png';
+import insta_logo from './images/instagram.png';
+import yt_logo from './images/youtube.png';
 
 function Footer(props) {
     return (
@@ -24,13 +27,25 @@ function Footer(props) {
                         <li><h5>Social Media Links</h5></li>
                         <li>
                             <a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener">
-                                FB Icon
+                                <img
+                                    src={ fb_logo }
+                                    alt="Facebook icon"
+                                    class="footer_icon"
+                                    />
                             </a>
                             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener">
-                                Insta Icon
+                                <img
+                                    src={ insta_logo }
+                                    alt="Instagram icon"
+                                    class="footer_icon"
+                                />
                             </a>
                             <a href="https://www.youtube.com/" target="_blank" rel="noreferrer noopener">
-                                YT Icon
+                                <img
+                                    src={ yt_logo }
+                                    alt="Youtube icon"
+                                    class="footer_icon"
+                                />
                             </a>
                         </li>
                     </ul>

@@ -260,6 +260,12 @@ footer li {
   margin-top: 5px;
 }
 
+.footer_icon {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
 #specials_header {
   margin-top: 20px;
 }
