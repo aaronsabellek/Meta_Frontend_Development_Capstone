@@ -1,20 +1,26 @@
 import logo from './images/Logo.svg';
+import menu_icon from './images/menu_icon.svg';
+import { Link } from 'react-router-dom';
 
 function Nav(props) {
     return (
-        <nav class="flexbox">
-            <div class="content">
-            <a href="Home">
-                <img src={logo} alt="Little Lemon Logo" />
-            </a>
-            <ul id="navigation" class="fullwidth">
-                <li><a href="Home">Home</a></li>
-                <li><a href="About">About</a></li>
-                <li><a href="Menu">Menu</a></li>
-                <li><a href="Reservations">Reservations</a></li>
-                <li><a href="Order online">Order online</a></li>
-                <li><a href="Login">Login</a></li>
-            </ul>
+        <nav>
+            <div class="content header_div">
+                <a href="Home" id="home_logo_link">
+                    <img src={logo} alt="Little Lemon Logo" />
+                </a>
+                <input type="checkbox" id="navigation_checkbox" />
+                <label for="navigation_checkbox" id="navigation_label" title="Navigation öffnen">
+                    <img src={menu_icon} id="menu_icon" alt="Menu icon" />
+                </label>
+                <ul id="navigation">
+                    <Link to="/" className="nav-item">Home</Link>
+                    <Link to="/about" className="nav-item">About</Link>
+                    <Link to="/menu" className="nav-item">Menu</Link>
+                    <Link to="/reservations" className="nav-item">Reservations</Link>
+                    <Link to="/order_online" className="nav-item">Order online</Link>
+                    <Link to="/login" className="nav-item">Login</Link>
+                </ul>
             </div>
         </nav>
     )

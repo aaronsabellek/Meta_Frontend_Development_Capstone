@@ -4,7 +4,7 @@ function About(props) {
     return (
         <div class="bg-green">
             <div class="content">
-                <div class="wrap_justify" id="about">
+                <div class="wrap_justify margin" id="about">
                     <div class="half_screen" id="first_block">
                         <h1>Little Lemon</h1>
                         <h2>Chicago</h2>

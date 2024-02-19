@@ -4,7 +4,7 @@ function Footer(props) {
     return (
         <footer>
             <div class="bg-white">
-                <div class="content">
+                <div class="content margin">
                     <img src={logo} alt="Little Lemon Logo" height="200" width="113" />
                     <ul>
                         <li><a href="Home">Home</a></li>

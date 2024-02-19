@@ -1,8 +1,8 @@
 import restaurantfood from './images/restauranfood.jpg';
 
-function Introduction(props) {
+function Reservations(props) {
     return (
-        <div class="bg-green">
+        <div class="bg-light_green">
             <div class="content">
                 <div class="wrap_justify margin" id="introduction">
                     <div class="half_screen" id="first_block">
@@ -18,4 +18,4 @@ function Introduction(props) {
     )
 }
 
-export default Introduction;
+export default Reservations;

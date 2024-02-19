@@ -1,15 +1,14 @@
-import Introduction from './Introduction.js';
-import Specials from './Specials.js';
-import Testimonials from './Testimonials.js';
-import About from './About.js';
+import Home from './Home.js';
+import Reservations from './Reservations';
+import { Routes, Route } from 'react-router-dom';
 
 function Main(props) {
     return (
         <main>
-            <Introduction />
-            <Specials />
-            <Testimonials />
-            <About />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/reservations" element={<Reservations />} />
+            </Routes>
         </main>
     )
 }
