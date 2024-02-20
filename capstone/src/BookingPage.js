@@ -1,11 +1,11 @@
 import BookingForm from './BookingForm.js';
 
-function BookingPage(props) {
+function BookingPage({availableTimes, dispatch}) {
 
     return (
         <>
             <h1>Reservation</h1>
-            <BookingForm availableTimes={props.availableTimes} dispatch={props.dispatch} />
+            <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
         </>
     )
 }
