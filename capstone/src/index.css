@@ -356,3 +356,9 @@ footer li {
   font-weight: bold;
   margin-top: -15px;
 }
+
+.registration_form {
+  display: grid;
+  max-width: 200px;
+  gap: 20px
+}
