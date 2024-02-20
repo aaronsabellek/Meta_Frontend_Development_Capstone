@@ -4,36 +4,6 @@ import { Navigate, useNavigate, Routes, Route } from 'react-router-dom';
 import { useState, useReducer } from "react";
 
 function Main(props) {
-    /*const [availableTimes, setAvailableTimes] = useState(
-        [
-            {slot: "17:00"},
-            {slot: "18:00"},
-            {slot: "19:00"},
-            {slot: "20:00"},
-            {slot: "21:00"},
-            {slot: "22:00"}
-        ]
-    )*/
-    /*
-    function updateTimes(time) {
-        return time;
-    }
-
-    function initializeTimes() {
-        return (
-            [
-                {slot: "17:00"},
-                {slot: "18:00"},
-                {slot: "19:00"},
-                {slot: "20:00"},
-                {slot: "21:00"},
-                {slot: "22:00"}
-            ]
-        )
-    }
-
-    const [status, dispatch] = useReducer(updateTimes, initializeTimes);*/
-
     const seededRandom = function (seed) {
         var m = 2**35 - 31;
         var a = 185852;
