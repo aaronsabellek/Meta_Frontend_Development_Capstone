@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function BookingForm({availableTimes, dispatch}) {
+function BookingForm(props) {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [guests, setGuests] = useState("");
@@ -28,7 +28,7 @@ function BookingForm({availableTimes, dispatch}) {
                 value={date}
                 onChange={(e) => {
                     setDate(e.target.value);
-                    dispatch(e.target.value);
+                    props.dispatch(e.target.value);
                 }}
             />
             <label htmlFor="res-time">Choose time</label>
@@ -39,11 +39,8 @@ function BookingForm({availableTimes, dispatch}) {
                     setTime(e.target.value)
                 }}
             >
-                {availableTimes.map(time =>
-                    <option data-testid="booking-time-option" key={time}>
-                        {time.slot}
-                    </option>
-                )}
+                <option value="">Select a time</option>
+                {props.availableTimes.availableTimes.map(availableTimes => {return <option key={availableTimes}>{availableTimes}</option>})}
             </select>
             <label htmlFor="guests">Number of guests</label>
             <input
