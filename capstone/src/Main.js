@@ -4,6 +4,7 @@ import { Navigate, useNavigate, Routes, Route } from 'react-router-dom';
 import { useState, useReducer } from "react";
 
 function Main(props) {
+    /*
     const seededRandom = function (seed) {
         var m = 2**35 - 31;
         var a = 185852;
@@ -30,19 +31,25 @@ function Main(props) {
     const submitAPI = function(formData) {
         return true;
     };
-
-    const initialState = {availableTimes:  fetchAPI(new Date())}
-    const [availableTimes, dispatch] = useReducer(updateTimes, initialState);
-
-    function updateTimes(state, date) {
-        return {availableTimes: fetchAPI(new Date(date))}
+    */
+    const initialState = /*{availableTimes:  fetchAPI(new Date())}*/ {availableTimes: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]}
+    function updateTimes() {
+        return {availableTimes: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]}
     }
+
+    const [availableTimes, dispatch] = useReducer(updateTimes, initialState);
+    /*
+    function updateTimes(state, date) {
+        return /*{availableTimes: fetchAPI(new Date(date))}
+    }
+
     const navigate = useNavigate();
     function submitForm (formData) {
         if (submitAPI(formData)) {
             navigate("/confirmed")
         }
     }
+    */
 
     return (
 
