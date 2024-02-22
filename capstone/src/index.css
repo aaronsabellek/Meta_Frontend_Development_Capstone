@@ -362,3 +362,16 @@ footer li {
   max-width: 200px;
   gap: 20px
 }
+
+input:focus:invalid {
+  border: 2px solid red;
+  }
+
+.required:after {
+  content:"*";
+  color: red;
+}
+
+.red {
+  color: red;
+}
