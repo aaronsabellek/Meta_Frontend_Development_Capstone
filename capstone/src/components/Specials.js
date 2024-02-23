@@ -30,27 +30,25 @@ function Specials() {
     ];
 
     return (
-        <div class="bg-white">
-                <div class="content margin">
-                    <div class="split">
-                        <h1 id="specials_header">This weeks specials!</h1>
-                        <div className="button_div" id="specials_button">
-                            <Link to="/menu" className="button">Online Menu</Link>
-                        </div>
-                    </div>
-                    <div class="dishes">
-                        {data.map((dish) => (
-                            <Dish
-                                src={dish.image}
-                                alt={dish.alt}
-                                dish={dish.dish}
-                                price={dish.price}
-                                description={dish.description}
-                            />
-                        ))}
-                    </div>
+        <div class="content margin">
+            <div class="split">
+                <h1 id="specials_header">This weeks specials!</h1>
+                <div className="button_div" id="specials_button">
+                    <Link to="/menu" className="button">Online Menu</Link>
                 </div>
             </div>
+            <div class="dishes">
+                {data.map((dish) => (
+                    <Dish
+                        src={dish.image}
+                        alt={dish.alt}
+                        dish={dish.dish}
+                        price={dish.price}
+                        description={dish.description}
+                    />
+                ))}
+            </div>
+        </div>
     )
 }
 

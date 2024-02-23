@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function BookingForm({availableTimes, dispatch, submitForm, dispatchEmail}) {
+function BookingForm({availableTimes, dispatchDate, submitForm, dispatchEmail}) {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [guests, setGuests] = useState("");
@@ -33,7 +33,7 @@ function BookingForm({availableTimes, dispatch, submitForm, dispatchEmail}) {
                 value={date}
                 onChange={(e) => {
                     setDate(e.target.value);
-                    dispatch(e.target.value);
+                    dispatchDate(e.target.value);
                 }}
                 required
                 min={new Date().toISOString().split('T')[0]}

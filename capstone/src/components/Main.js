@@ -13,7 +13,7 @@ function Main() {
         return {timeSlots: fetchAPI(new Date(date))};
     };
 
-    const [availableTimes, dispatch] = useReducer(updateTimes, initialState);
+    const [availableTimes, dispatchDate] = useReducer(updateTimes, initialState);
 
     const navigate = useNavigate();
     function submitForm(formData) {
@@ -35,7 +35,7 @@ function Main() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<UnderConstruction />} />
                 <Route path="/menu" element={<UnderConstruction />} />
-                <Route path="/reservations" element={<Reservations availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} dispatchEmail={dispatchEmail} />} />
+                <Route path="/reservations" element={<Reservations availableTimes={availableTimes} dispatchDate={dispatchDate} submitForm={submitForm} dispatchEmail={dispatchEmail} />} />
                 <Route path='/confirmation' element={<ConfirmedBooking userEmail={userEmail} />} />
                 <Route path="/order_online" element={<UnderConstruction />} />
                 <Route path="/login" element={<UnderConstruction />} />

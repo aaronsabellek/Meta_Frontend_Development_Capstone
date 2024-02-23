@@ -28,10 +28,6 @@ code {
   background-color: #495E57;
 }
 
-.bg-white {
-  background-color: white;
-}
-
 .bg-light_green {
   background-color: #EDEFEE;
 }
@@ -270,7 +266,7 @@ footer li {
 }
 
 #specials_header {
-  margin-top: 20px;
+  margin-top: -10px;
 }
 
 .dishes {
@@ -324,6 +320,7 @@ footer li {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 0x;
 }
 
 .testimonial_frame {
@@ -425,10 +422,11 @@ input:focus:invalid {
 }
 
 #specials_button {
+  margin-top: 20px;
   @media (max-width: 612px) {
     margin: auto;
-    margin-top: -20px;
-    margin-bottom: 50px;
+    margin-top: -10px;
+    margin-bottom: 70px;
   }
 }
 

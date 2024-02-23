@@ -1,13 +1,11 @@
 import BookingForm from '../components/BookingForm.js';
 
-function BookingPage({availableTimes, dispatch, submitForm, dispatchEmail}) {
+function BookingPage({availableTimes, dispatchDate, submitForm, dispatchEmail}) {
 
     return (
-        <div class="bg-white">
-            <div class="reservation content">
-                <h1 class="green">Reservation</h1>
-                <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} dispatchEmail={dispatchEmail} />
-            </div>
+        <div class="reservation content">
+            <h1 class="green">Reservation</h1>
+            <BookingForm availableTimes={availableTimes} dispatchDate={dispatchDate} submitForm={submitForm} dispatchEmail={dispatchEmail} />
         </div>
     )
 }
