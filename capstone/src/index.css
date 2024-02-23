@@ -175,15 +175,16 @@ main button {
   flex-wrap: wrap;
 }
 
-#introduction {
+.introduction {
   color: white;
 }
 
-#introduction h1 {
+.high {
   color: #F4CE14;
+  margin-top: 0px;
 }
 
-#introduction h2 {
+.introduction h2 {
   margin-top: -50px;
 }
 
@@ -215,8 +216,7 @@ main button {
 #chef_img {
   max-height: 300px;
   object-fit: cover;
-  border-radius: 10px;
-
+  border-radius: 5px;
   @media (min-width: 900px) {
     min-width: 450px;
   }
@@ -263,15 +263,14 @@ footer li {
 .footer_icon {
   height: 50px;
   width: 50px;
-  margin-right: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 3px;
+  color: white;
 }
 
 #specials_header {
   margin-top: 20px;
-}
-
-#specials_button {
-  margin-top: 30px;
 }
 
 .dishes {
@@ -357,21 +356,117 @@ footer li {
   margin-top: -15px;
 }
 
-.registration_form {
-  display: grid;
-  max-width: 200px;
-  gap: 20px
-}
-
 input:focus:invalid {
   border: 2px solid red;
   }
 
 .required:after {
   content:"*";
-  color: red;
+  color: #F4CE14;;
 }
 
-.red {
-  color: red;
+.yellow {
+  color: #F4CE14;;
+}
+
+.reservation h1 {
+  color: black;
+}
+
+.reservation {
+ color: white;
+}
+
+.block {
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.input {
+  margin-bottom: 20px;
+  width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  @media (max-width: 600px) {
+    width: 70%;
+  }
+}
+
+.select {
+  margin-bottom: 20px;
+  width: 427px;
+  padding: 10px;
+  border-radius: 5px;
+  @media (max-width: 600px) {
+    width: 75%;
+  }
+}
+
+.button {
+  background-color: #F4CE14;
+  color: black;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  max-height: 45px;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.button_div {
+  margin-top: 50px;
+  @media (max-width: 650px) {
+    margin-bottom: 50px;
+  }
+}
+
+#specials_button {
+  @media (max-width: 612px) {
+    margin: auto;
+    margin-top: -20px;
+    margin-bottom: 50px;
+  }
+}
+
+.registration_form {
+  background-color: #495E57;
+  margin: auto;
+  width: 600px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+#construction {
+  max-height: 300px;
+}
+
+.construction {
+  font-size: 20px;
+}
+
+#social_media_bg {
+  background-color: #F4CE14;
+  padding: 10px 10px 10px 10px;
+  border-radius: 50px;
+}
+
+#submit_form:hover {
+  cursor: pointer;
+}
+
+.center {
+  margin-left: 30%;
+  @media (max-width: 600px) {
+    margin-left: 10%;
+  }
 }

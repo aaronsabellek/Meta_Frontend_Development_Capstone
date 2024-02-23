@@ -1,8 +1,8 @@
 import './App.css';
 import React, { Fragment } from 'react';
-import Nav from './Nav.js';
-import Main from './Main.js';
-import Footer from './Footer.js';
+import Nav from './components/Nav.js';
+import Main from './components/Main.js';
+import Footer from './components/Footer.js';
 
 function App() {
   return (
