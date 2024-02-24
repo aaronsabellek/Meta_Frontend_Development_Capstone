@@ -1,4 +1,4 @@
-import chefs from '../chefs.jpg';
+import chefs from '../images/chefs.jpg';
 
 function About() {
     return (

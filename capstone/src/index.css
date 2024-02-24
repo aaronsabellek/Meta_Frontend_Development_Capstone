@@ -56,6 +56,10 @@ ul {
   }
 }
 
+#nav_icon:hover, #submit_form:hover {
+  cursor: pointer;
+}
+
 /* background-color themes */
 .bg-green {
   background-color: #495E57;
@@ -146,6 +150,10 @@ nav div {
   right: 0;
 }
 
+#nav_logo {
+  max-width: 148px;
+}
+
 #nav_checkbox {
   opacity: 0;
   position: absolute;
@@ -153,7 +161,7 @@ nav div {
   right: 0;
 }
 
-#navigation_checkbox:checked ~ #navigation {
+#nav_checkbox:checked ~ #navigation {
   display: flex;
 }
 
@@ -412,10 +420,6 @@ input:focus:invalid {
   @media (max-width: 600px) {
     width: 75%;
   }
-}
-
-#submit_form:hover {
-  cursor: pointer;
 }
 
 /*        introduction */

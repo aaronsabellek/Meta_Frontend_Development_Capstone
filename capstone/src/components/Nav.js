@@ -5,7 +5,10 @@ import menu_icon from '../images/menu_icon.svg';
 function Nav() {
     return (
         <nav className="content">
-            <Link to="/">
+            <Link
+                id="nav_logo"
+                to="/"
+            >
                 <img
                     src={ logo }
                     alt="Little Lemon Logo"
