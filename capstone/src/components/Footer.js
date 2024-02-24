@@ -3,11 +3,11 @@ import fb_logo from '../images/facebook.png';
 import insta_logo from '../images/instagram.png';
 import yt_logo from '../images/youtube.png';
 
-function Footer(props) {
+function Footer() {
     return (
         <footer>
-            <div class="content margin">
-                <img src={logo} alt="Little Lemon Logo" height="200" width="113" />
+            <div className="content comp_margin">
+                <img src={logo} alt="Little Lemon Logo" id="footer_logo" />
                 <ul>
                     <li><a href="Home">Home</a></li>
                     <li><a href="About">About</a></li>
@@ -24,26 +24,26 @@ function Footer(props) {
                 </ul>
                 <ul>
                     <li><h5>Social Media Links</h5></li>
-                    <li id="social_media_bg">
+                    <li id="sm_background">
                         <a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener">
                             <img
                                 src={ fb_logo }
                                 alt="Facebook icon"
-                                class="footer_icon"
+                                className="footer_icon"
                                 />
                         </a>
                         <a href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener">
                             <img
                                 src={ insta_logo }
                                 alt="Instagram icon"
-                                class="footer_icon"
+                                className="footer_icon"
                             />
                         </a>
                         <a href="https://www.youtube.com/" target="_blank" rel="noreferrer noopener">
                             <img
                                 src={ yt_logo }
                                 alt="Youtube icon"
-                                class="footer_icon"
+                                className="footer_icon"
                             />
                         </a>
                     </li>

@@ -30,14 +30,14 @@ function Specials() {
     ];
 
     return (
-        <div class="content margin">
-            <div class="split">
+        <div className="content comp_margin">
+            <div className="wrap_justify">
                 <h1 id="specials_header">This weeks specials!</h1>
                 <div className="button_div" id="specials_button">
                     <Link to="/menu" className="button">Online Menu</Link>
                 </div>
             </div>
-            <div class="dishes">
+            <div className="wrap_center">
                 {data.map((dish) => (
                     <Dish
                         src={dish.image}

@@ -7,14 +7,19 @@ import { useReducer } from 'react';
 import { fetchAPI, submitAPI } from '../utils/API.js';
 
 function Main() {
+
+    // set initial times for user date
     const initialState = {timeSlots: fetchAPI(new Date())};
 
+    // update available times from user date
     function updateTimes(state, date) {
         return {timeSlots: fetchAPI(new Date(date))};
     };
 
+    // set available times from user date as state
     const [availableTimes, dispatchDate] = useReducer(updateTimes, initialState);
 
+    // navigate to confirmation page after successful form submission
     const navigate = useNavigate();
     function submitForm(formData) {
         if (submitAPI(formData)) {
@@ -22,11 +27,12 @@ function Main() {
         }
     };
 
-   const initialEmail = "";
-   function updateEmail(state, email) {
-    return email;
-   }
-   const [userEmail, dispatchEmail] = useReducer(updateEmail, initialEmail);
+    // set and update user email as state
+    const initialEmail = "";
+    function updateEmail(state, email) {
+        return email;
+    }
+    const [userEmail, dispatchEmail] = useReducer(updateEmail, initialEmail);
 
     return (
 

@@ -4,24 +4,22 @@ import { Link } from 'react-router-dom';
 
 function Nav() {
     return (
-        <nav>
-            <div class="content header_div">
-                <Link to="/">
-                    <img src={logo} alt="Little Lemon Logo" />
-                </Link>
-                <input type="checkbox" id="navigation_checkbox" />
-                <label for="navigation_checkbox" id="navigation_label" title="Navigation öffnen">
-                    <img src={menu_icon} id="menu_icon" alt="Menu icon" />
-                </label>
-                <ul id="navigation">
-                    <Link to="/" className="nav-item">Home</Link>
-                    <Link to="/about" className="nav-item">About</Link>
-                    <Link to="/menu" className="nav-item">Menu</Link>
-                    <Link to="/reservations" className="nav-item">Reservations</Link>
-                    <Link to="/order_online" className="nav-item">Order online</Link>
-                    <Link to="/login" className="nav-item">Login</Link>
-                </ul>
-            </div>
+        <nav className="content">
+            <Link to="/">
+                <img src={logo} alt="Little Lemon Logo" />
+            </Link>
+            <input type="checkbox" id="nav_checkbox" />
+            <label htmlFor="nav_checkbox" id="nav_label" title="Navigation öffnen">
+                <img src={menu_icon} id="nav_icon" alt="Navigation icon" />
+            </label>
+            <ul id="navigation">
+                <Link to="/" className="nav_item">Home</Link>
+                <Link to="/about" className="nav_item">About</Link>
+                <Link to="/menu" className="nav_item">Menu</Link>
+                <Link to="/reservations" className="nav_item">Reservations</Link>
+                <Link to="/order_online" className="nav_item">Order online</Link>
+                <Link to="/login" className="nav_item">Login</Link>
+            </ul>
         </nav>
     )
 }

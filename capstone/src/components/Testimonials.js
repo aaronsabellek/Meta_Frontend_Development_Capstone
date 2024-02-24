@@ -33,10 +33,10 @@ function Testimonials() {
     ];
 
     return (
-        <div class="bg-light_green">
-            <div class="content">
+        <div className="bg-light_green">
+            <div className="content">
                 <h1>Our customers</h1>
-                <div class="dishes margin">
+                <div className="wrap_center comp_margin">
                     {data.map((testimonial) => (
                         <Testimonial
                             image={testimonial.image}
