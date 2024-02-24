@@ -39,10 +39,10 @@ function Testimonials() {
                 <div className="wrap_center comp_margin">
                     {data.map((testimonial) => (
                         <Testimonial
-                            image={testimonial.image}
-                            name={testimonial.name}
-                            rating={testimonial.rating}
-                            text={testimonial.text}
+                            image={ testimonial.image }
+                            name={ testimonial.name }
+                            rating={ testimonial.rating }
+                            text={ testimonial.text }
                         />
                     ))}
                 </div>

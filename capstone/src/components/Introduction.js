@@ -11,10 +11,19 @@ function Introduction() {
                         <h2>Chicago</h2>
                         <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
                         <div className="button_div">
-                            <Link to="/reservations" className="button">Reserve a table!</Link>
+                            <Link
+                                to="/reservations"
+                                className="button"
+                            >
+                                Reserve a table!
+                            </Link>
                         </div>
                     </div>
-                    <img class="half_screen half_img" src={restaurantfood} alt="Chef presenting a meal" />
+                    <img
+                        className="half_screen half_img"
+                        src={ restaurantfood }
+                        alt="Chef presenting a meal"
+                    />
                 </div>
             </div>
         </div>

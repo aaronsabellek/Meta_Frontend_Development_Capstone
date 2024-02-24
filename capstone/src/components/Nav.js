@@ -6,11 +6,25 @@ function Nav() {
     return (
         <nav className="content">
             <Link to="/">
-                <img src={logo} alt="Little Lemon Logo" />
+                <img
+                    src={ logo }
+                    alt="Little Lemon Logo"
+                />
             </Link>
-            <input type="checkbox" id="nav_checkbox" />
-            <label htmlFor="nav_checkbox" id="nav_label" title="Navigation öffnen">
-                <img src={menu_icon} id="nav_icon" alt="Navigation icon" />
+            <input
+                type="checkbox"
+                id="nav_checkbox"
+            />
+            <label
+                htmlFor="nav_checkbox"
+                id="nav_label"
+                title="Navigation öffnen"
+            >
+                <img
+                    src={ menu_icon }
+                    id="nav_icon"
+                    alt="Navigation icon"
+                />
             </label>
             <ul id="navigation">
                 <Link to="/" className="nav_item">Home</Link>

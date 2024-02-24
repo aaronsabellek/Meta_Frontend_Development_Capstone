@@ -9,11 +9,11 @@ import { fetchAPI, submitAPI } from '../utils/API.js';
 function Main() {
 
     // set initial times for user date
-    const initialState = {timeSlots: fetchAPI(new Date())};
+    const initialState = { timeSlots: fetchAPI(new Date()) };
 
     // update available times from user date
     function updateTimes(state, date) {
-        return {timeSlots: fetchAPI(new Date(date))};
+        return { timeSlots: fetchAPI(new Date(date)) };
     };
 
     // set available times from user date as state
@@ -41,8 +41,23 @@ function Main() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<UnderConstruction />} />
                 <Route path="/menu" element={<UnderConstruction />} />
-                <Route path="/reservations" element={<Reservations availableTimes={availableTimes} dispatchDate={dispatchDate} submitForm={submitForm} dispatchEmail={dispatchEmail} />} />
-                <Route path='/confirmation' element={<ConfirmedBooking userEmail={userEmail} />} />
+                <Route
+                    path="/reservations"
+                    element={
+                        <Reservations
+                            availableTimes={availableTimes}
+                            dispatchDate={dispatchDate}
+                            submitForm={submitForm}
+                            dispatchEmail={dispatchEmail}
+                        />
+                    }
+                />
+                <Route
+                    path='/confirmation'
+                    element={
+                        <ConfirmedBooking userEmail={userEmail} />
+                    }
+                />
                 <Route path="/order_online" element={<UnderConstruction />} />
                 <Route path="/login" element={<UnderConstruction />} />
             </Routes>

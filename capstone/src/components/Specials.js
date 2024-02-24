@@ -34,17 +34,22 @@ function Specials() {
             <div className="wrap_justify">
                 <h1 id="specials_header">This weeks specials!</h1>
                 <div className="button_div" id="specials_button">
-                    <Link to="/menu" className="button">Online Menu</Link>
+                    <Link
+                        to="/menu"
+                        className="button"
+                    >
+                        Online Menu
+                    </Link>
                 </div>
             </div>
             <div className="wrap_center">
                 {data.map((dish) => (
                     <Dish
-                        src={dish.image}
-                        alt={dish.alt}
-                        dish={dish.dish}
-                        price={dish.price}
-                        description={dish.description}
+                        src={ dish.image }
+                        alt={ dish.alt }
+                        dish={ dish.dish }
+                        price={ dish.price }
+                        description={ dish.description }
                     />
                 ))}
             </div>

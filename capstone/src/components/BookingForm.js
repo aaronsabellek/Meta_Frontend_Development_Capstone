@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function BookingForm({availableTimes, dispatchDate, submitForm, dispatchEmail}) {
+function BookingForm({ availableTimes, dispatchDate, submitForm, dispatchEmail }) {
 
     // set states for form
     const [date, setDate] = useState("");
@@ -21,7 +21,10 @@ function BookingForm({availableTimes, dispatchDate, submitForm, dispatchEmail}) 
     currentDate.setDate(currentDate.getDate() - 1);
 
     return (
-        <form onSubmit={handleSubmit} className="reg_form">
+        <form
+            onSubmit={ handleSubmit }
+            className="reg_form"
+        >
             <h2 className="block">Reservation details</h2>
             <label
                 htmlFor="res-date"

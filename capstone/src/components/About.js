@@ -5,7 +5,11 @@ function About() {
         <div className="bg-green">
             <div className="content">
                 <div className="wrap_justify comp_margin">
-                    <img className="half_screen half_img" src={ mario_adrian_b } alt="Owners of Little Lemon" />
+                    <img
+                        className="half_screen half_img"
+                        src={ mario_adrian_b }
+                        alt="Owners of Little Lemon"
+                    />
                     <div class="half_screen">
                         <h1 className="high">Little Lemon</h1>
                         <h2>Chicago</h2>

@@ -7,7 +7,11 @@ function Footer() {
     return (
         <footer>
             <div className="content comp_margin">
-                <img src={logo} alt="Little Lemon Logo" id="footer_logo" />
+                <img
+                    src={ logo }
+                    alt="Little Lemon Logo"
+                    id="footer_logo"
+                />
                 <ul>
                     <li><a href="Home">Home</a></li>
                     <li><a href="About">About</a></li>
@@ -25,21 +29,33 @@ function Footer() {
                 <ul>
                     <li><h5>Social Media Links</h5></li>
                     <li id="sm_background">
-                        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener">
+                        <a
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
                             <img
                                 src={ fb_logo }
                                 alt="Facebook icon"
                                 className="footer_icon"
                                 />
                         </a>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener">
+                        <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
                             <img
                                 src={ insta_logo }
                                 alt="Instagram icon"
                                 className="footer_icon"
                             />
                         </a>
-                        <a href="https://www.youtube.com/" target="_blank" rel="noreferrer noopener">
+                        <a
+                            href="https://www.youtube.com/"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
                             <img
                                 src={ yt_logo }
                                 alt="Youtube icon"
