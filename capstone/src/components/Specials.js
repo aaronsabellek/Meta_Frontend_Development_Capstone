@@ -1,8 +1,8 @@
 import Dish from './Dish.js';
-import greek_salad from '../images/Greek_salad.jpg';
-import bruchetta from '../images/Bruchetta.jpg';
-import lemon_dessert from '../images/lemon_dessert.jpg';
 import { Link } from 'react-router-dom';
+import greek_salad from '../images/greek_salad.jpg';
+import bruchetta from '../images/bruchetta.jpg';
+import lemon_dessert from '../images/lemon_dessert.jpg';
 
 function Specials() {
     const data = [

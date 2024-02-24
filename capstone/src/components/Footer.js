@@ -1,4 +1,4 @@
-import logo from '../images/Logo_big.png';
+import logo from '../images/logo_big.png';
 import fb_logo from '../images/facebook.png';
 import insta_logo from '../images/instagram.png';
 import yt_logo from '../images/youtube.png';

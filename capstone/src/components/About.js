@@ -1,4 +1,4 @@
-import mario_adrian_b from '../images/Mario_Adrian_b.jpg';
+import chefs from '../chefs.jpg';
 
 function About() {
     return (
@@ -7,7 +7,7 @@ function About() {
                 <div className="wrap_justify comp_margin">
                     <img
                         className="half_screen half_img"
-                        src={ mario_adrian_b }
+                        src={ chefs }
                         alt="Owners of Little Lemon"
                     />
                     <div class="half_screen">

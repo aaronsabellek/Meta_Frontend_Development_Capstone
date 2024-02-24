@@ -1,8 +1,8 @@
 import Testimonial from './Testimonial.js';
-import portrait_1 from '../images/Portrait_1.jpg';
-import portrait_2 from '../images/Portrait_2.jpg';
-import portrait_3 from '../images/Portrait_3.jpg';
-import portrait_4 from '../images/Portrait_4.jpg';
+import portrait_1 from '../images/portrait_1.jpg';
+import portrait_2 from '../images/portrait_2.jpg';
+import portrait_3 from '../images/portrait_3.jpg';
+import portrait_4 from '../images/portrait_4.jpg';
 
 function Testimonials() {
     const data = [

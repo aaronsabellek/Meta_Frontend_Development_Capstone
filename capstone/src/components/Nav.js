@@ -1,6 +1,6 @@
-import logo from '../images/Logo.svg';
-import menu_icon from '../images/menu_icon.svg';
 import { Link } from 'react-router-dom';
+import logo from '../images/logo_small.svg';
+import menu_icon from '../images/menu_icon.svg';
 
 function Nav() {
     return (

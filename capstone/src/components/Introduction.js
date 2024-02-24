@@ -1,5 +1,5 @@
-import restaurantfood from '../images/restauranfood.jpg';
 import { Link } from 'react-router-dom';
+import restaurant_food from '../images/restaurant_food.jpg';
 
 function Introduction() {
     return (
@@ -21,7 +21,7 @@ function Introduction() {
                     </div>
                     <img
                         className="half_screen half_img"
-                        src={ restaurantfood }
+                        src={ restaurant_food }
                         alt="Chef presenting a meal"
                     />
                 </div>
