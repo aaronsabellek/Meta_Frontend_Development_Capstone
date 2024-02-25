@@ -149,11 +149,12 @@ function BookingForm({ availableTimes, dispatchDate, submitForm, dispatchEmail }
                 id="email"
                 required
             />
-            <p class="reg_block input">Fields with <em class="yellow">*</em> are required</p>
+            <p className="reg_block input">Fields with <em className="yellow">*</em> are required</p>
             <input
                 id="submit_form"
+                data-testid="submit_form"
                 type="submit"
-                class="reg_block button"
+                className="reg_block button"
                 value="Make Your reservation"
             />
         </form>
