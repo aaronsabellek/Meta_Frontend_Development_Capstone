@@ -6,14 +6,16 @@ const availableTimes = {timeSlots: ["17:00", "18:00", "19:00", "20:00", "21:00",
 const currentDate = new Date().toISOString().split('T')[0];
 const dispatchDate = jest.fn();
 const dispatchEmail = jest.fn();
+const submitForm = jest.fn();
 
 test('Renders the BookingForm and checks for (in)valid user input', () => {
   render(
     <BookingForm
     availableTimes={availableTimes}
+    currentDate={currentDate}
     dispatchDate={dispatchDate}
     dispatchEmail={dispatchEmail}
-    currentDate={currentDate}
+    submitForm={submitForm}
     />);
 
   // set form elements
@@ -32,9 +34,7 @@ test('Renders the BookingForm and checks for (in)valid user input', () => {
   fireEvent.change(occasionSelect, { target: { value: "None" } });
   fireEvent.change(emailInput, { target: { value: "janedoe@email.com" } });
   fireEvent.change(nameInput, { target: { value:"Jane Doe" } });
-
-  // submit button is not disabled
-  expect(submitButton).not.toBeDisabled();
+  expect(submitButton).toBeEnabled();
 
   // submit button is disabled when user date is empty
   fireEvent.change(dateInput, { target: { value: "" } });
@@ -87,4 +87,10 @@ test('Renders the BookingForm and checks for (in)valid user input', () => {
   // submit button is disabled when user email has wrong format #2
   fireEvent.change(emailInput, { target: { value: "janedoe@emailcom" } });
   expect(submitButton).toBeDisabled();
+
+  fireEvent.change(emailInput, { target: { value: "janedoe@email.com" } });
+
+  // submit form
+  fireEvent.click(submitButton);
+  expect(submitForm).toHaveBeenCalled();
 });
