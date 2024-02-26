@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 function BookingForm(
-                        {
-                            availableTimes,
-                            dispatchDate,
-                            dispatchEmail,
-                            submitForm
-                        }
-                    ) {
+    {
+        availableTimes,
+        dispatchDate,
+        dispatchEmail,
+        submitForm
+    }
+) {
 
     // set states for form
     const [date, setDate] = useState("");

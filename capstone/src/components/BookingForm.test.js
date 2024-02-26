@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import BookingForm from './BookingForm.js';
 
 // set form arguments
-const availableTimes = {timeSlots: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]};
+const availableTimes = { timeSlots: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"] };
 const currentDate = new Date().toISOString().split('T')[0];
 const dispatchDate = jest.fn();
 const dispatchEmail = jest.fn();
