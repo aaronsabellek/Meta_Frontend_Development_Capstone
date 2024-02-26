@@ -50,7 +50,9 @@ function BookingForm(
             time &&
             validateGuests(guests) &&
             name &&
-            validateEmail(email)
+            name.length < 31 &&
+            validateEmail(email) &&
+            email.length < 31
         );
     };
 
@@ -163,7 +165,7 @@ function BookingForm(
                     setName(e.target.value)
                 }}
                 placeholder="Name"
-                min="2"
+                min="1"
                 max="30"
                 id="name"
                 required
@@ -185,6 +187,7 @@ function BookingForm(
                 }}
                 placeholder="Email"
                 id="email"
+                max="30"
                 required
             />
             <p className="reg_block input">Fields with <em className="yellow">*</em> are required</p>

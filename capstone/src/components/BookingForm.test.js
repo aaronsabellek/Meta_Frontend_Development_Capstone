@@ -36,55 +36,63 @@ test('Renders the BookingForm and checks for (in)valid user input', () => {
   fireEvent.change(nameInput, { target: { value:"Jane Doe" } });
   expect(submitButton).toBeEnabled();
 
-  // submit button is disabled when user date is empty
+  // submit button is disabled when user date is empty or in the past
   fireEvent.change(dateInput, { target: { value: "" } });
   expect(submitButton).toBeDisabled();
 
-  // submit button is disabled when user date is yesterday
   fireEvent.change(dateInput, { target: { value: currentDate - 1 } });
   expect(submitButton).toBeDisabled();
 
   fireEvent.change(dateInput, { target: { value: currentDate } });
 
-  // submit button is disabled when user time is empty
+  // submit button is disabled when user time is empty or unavailable
   fireEvent.change(timeSelect, { target: { value: "" } });
   expect(submitButton).toBeDisabled();
 
-  // submit button is disabled when user time is unavailable
   fireEvent.change(timeSelect, { target: { value: "17:30" } });
   expect(submitButton).toBeDisabled();
 
   fireEvent.change(timeSelect, { target: { value: "17:00" } });
 
-  // submit button is disabled when guest number is empty
+  // submit button is disabled when guest number is empty, lower than 1 or higher than 10
   fireEvent.change(guestsInput, { target: { value: "" } });
   expect(submitButton).toBeDisabled();
 
-  // submit button is disabled when guest number is lower than 1
   fireEvent.change(guestsInput, { target: { value: "0" } });
   expect(submitButton).toBeDisabled();
 
-  // submit button is disabled when guest number is higher than 10
+  fireEvent.change(guestsInput, { target: { value: "1" } });
+  expect(submitButton).toBeEnabled();
+
   fireEvent.change(guestsInput, { target: { value: "11" } });
   expect(submitButton).toBeDisabled();
 
-  fireEvent.change(guestsInput, { target: { value: "2" } });
+  fireEvent.change(guestsInput, { target: { value: "10" } });
+  expect(submitButton).toBeEnabled();
 
-  // submit button is disabled when user name is empty
+  // submit button is disabled when user name is empty or more than 30 chars long
   fireEvent.change(nameInput, { target: { value:"" } });
   expect(submitButton).toBeDisabled();
 
-  fireEvent.change(nameInput, { target: { value:"Jane Doe" } });
+  fireEvent.change(nameInput, { target: { value:"janedoejanedoejanedoejanedoejan" /*31 chars*/ } });
+  expect(submitButton).toBeDisabled();
 
-  // submit button is disabled when user email is empty
+  fireEvent.change(nameInput, { target: { value:"janedoejanedoejanedoejanedoeja" /*30 chars*/ } });
+  expect(submitButton).toBeEnabled();
+
+  // submit button is disabled when user email is empty, more than 30 chars long or has no email format
   fireEvent.change(emailInput, { target: { value: "" } });
   expect(submitButton).toBeDisabled();
 
-  // submit button is disabled when user email has wrong format #1
+  fireEvent.change(emailInput, { target: { value: "janedoejanedoejanedoe@email.com" /*31 chars*/ } });
+  expect(submitButton).toBeDisabled();
+
+  fireEvent.change(emailInput, { target: { value: "janedoejanedoejanedo@email.com" /*30 chars*/ } });
+  expect(submitButton).toBeEnabled();
+
   fireEvent.change(emailInput, { target: { value: "janedoeemail.com" } });
   expect(submitButton).toBeDisabled();
 
-  // submit button is disabled when user email has wrong format #2
   fireEvent.change(emailInput, { target: { value: "janedoe@emailcom" } });
   expect(submitButton).toBeDisabled();
 
