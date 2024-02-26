@@ -1,6 +1,13 @@
 import { useState } from "react";
 
-function BookingForm({ availableTimes, dispatchDate, submitForm, dispatchEmail }) {
+function BookingForm(
+                        {
+                            availableTimes,
+                            dispatchDate,
+                            dispatchEmail,
+                            submitForm
+                        }
+                    ) {
 
     // set states for form
     const [date, setDate] = useState("");
@@ -16,9 +23,36 @@ function BookingForm({ availableTimes, dispatchDate, submitForm, dispatchEmail }
         submitForm(e);
     }
 
-    // set current date to compare with user date
-    const currentDate = new Date();
-    currentDate.setDate(currentDate.getDate() - 1);
+    // define today as smallest user date
+    const minDate = new Date().toISOString().split('T')[0];
+
+    // validate email format
+    const validateEmail = email => {
+        return String(email)
+          .toLowerCase()
+          .match(
+            /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+        );
+    };
+
+    // validate guest number (1-10)
+    const validateGuests = guests => {
+        return String(guests)
+        .match(
+            /^(?:[1-9]|0[1-9]|10)$/
+        )
+    }
+
+    // validate user input
+    const isValid = () => {
+        return (
+            date >= minDate &&
+            time &&
+            validateGuests(guests) &&
+            name &&
+            validateEmail(email)
+        );
+    };
 
     return (
         <form
@@ -43,7 +77,7 @@ function BookingForm({ availableTimes, dispatchDate, submitForm, dispatchEmail }
                     dispatchDate(e.target.value);
                 }}
                 required
-                min={new Date().toISOString().split('T')[0]}
+                min={minDate}
             />
             <label
                 htmlFor="res-time"
@@ -64,7 +98,11 @@ function BookingForm({ availableTimes, dispatchDate, submitForm, dispatchEmail }
                 <option value="">Select a time</option>
                 {availableTimes.timeSlots.map(time => {
                     return (
-                        <option id="res-time" key={time}>
+                        <option
+                            id="res-time-option"
+                            data-testid="res-time-option"
+                            key={time}
+                        >
                             {time}
                         </option>
                     )
@@ -105,9 +143,9 @@ function BookingForm({ availableTimes, dispatchDate, submitForm, dispatchEmail }
                     setOccasion(e.target.value)
                 }}
             >
-                <option value="none">None</option>
-                <option value="birthday">Birthday</option>
-                <option value="anniversary">Anniversary</option>
+                <option value="none" data-testid="occ-option">None</option>
+                <option value="birthday" data-testid="occ-option">Birthday</option>
+                <option value="anniversary" data-testid="occ-option">Anniversary</option>
             </select>
             <h2 className="reg_block">Contact details</h2>
             <label
@@ -156,6 +194,7 @@ function BookingForm({ availableTimes, dispatchDate, submitForm, dispatchEmail }
                 type="submit"
                 className="reg_block button"
                 value="Make Your reservation"
+                disabled={!isValid()}
             />
         </form>
     )

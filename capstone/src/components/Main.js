@@ -9,7 +9,7 @@ import { fetchAPI, submitAPI } from '../utils/API.js';
 function Main() {
 
     // set initial times for user date
-    const initialState = { timeSlots: fetchAPI(new Date()) };
+    const initializeTimes = { timeSlots: fetchAPI(new Date()) };
 
     // update available times from user date
     function updateTimes(state, date) {
@@ -17,7 +17,7 @@ function Main() {
     };
 
     // set available times from user date as state
-    const [availableTimes, dispatchDate] = useReducer(updateTimes, initialState);
+    const [availableTimes, dispatchDate] = useReducer(updateTimes, initializeTimes);
 
     // navigate to confirmation page after successful form submission
     const navigate = useNavigate();
@@ -28,11 +28,11 @@ function Main() {
     };
 
     // set and update user email as state
-    const initialEmail = "";
+    const initializeEmail = "";
     function updateEmail(state, email) {
         return email;
     }
-    const [userEmail, dispatchEmail] = useReducer(updateEmail, initialEmail);
+    const [userEmail, dispatchEmail] = useReducer(updateEmail, initializeEmail);
 
     return (
 
@@ -47,8 +47,8 @@ function Main() {
                         <Reservations
                             availableTimes={availableTimes}
                             dispatchDate={dispatchDate}
-                            submitForm={submitForm}
                             dispatchEmail={dispatchEmail}
+                            submitForm={submitForm}
                         />
                     }
                 />
