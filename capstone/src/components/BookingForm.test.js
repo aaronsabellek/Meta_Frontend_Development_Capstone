@@ -90,7 +90,7 @@ test('Renders the BookingForm and checks for (in)valid user input', () => {
 
   fireEvent.change(emailInput, { target: { value: "janedoe@email.com" } });
 
-  // submit form
+  // form can be submitted
   fireEvent.click(submitButton);
   expect(submitForm).toHaveBeenCalled();
 });
