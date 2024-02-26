@@ -102,7 +102,6 @@ function BookingForm(
                     return (
                         <option
                             id="res-time-option"
-                            data-testid="res-time-option"
                             key={time}
                         >
                             {time}
@@ -145,9 +144,9 @@ function BookingForm(
                     setOccasion(e.target.value)
                 }}
             >
-                <option value="none" data-testid="occ-option">None</option>
-                <option value="birthday" data-testid="occ-option">Birthday</option>
-                <option value="anniversary" data-testid="occ-option">Anniversary</option>
+                <option value="none">None</option>
+                <option value="birthday">Birthday</option>
+                <option value="anniversary">Anniversary</option>
             </select>
             <h2 className="reg_block">Contact details</h2>
             <label
