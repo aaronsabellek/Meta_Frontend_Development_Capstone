@@ -54,9 +54,7 @@ function Main() {
                 />
                 <Route
                     path='/confirmation'
-                    element={
-                        <ConfirmedBooking userEmail={userEmail} />
-                    }
+                    element={<ConfirmedBooking userEmail={userEmail} />}
                 />
                 <Route path="/order_online" element={<UnderConstruction />} />
                 <Route path="/login" element={<UnderConstruction />} />
