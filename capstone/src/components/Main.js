@@ -9,7 +9,7 @@ import { fetchAPI, submitAPI } from '../utils/API.js';
 function Main() {
 
     // set initial times for user date
-    const initializeTimes = { timeSlots: fetchAPI(new Date()) };
+    const initializeTimes =  {timeSlots: fetchAPI(new Date())};
 
     // update available times from user date
     function updateTimes(state, date) {
