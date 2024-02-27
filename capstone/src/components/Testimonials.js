@@ -43,6 +43,7 @@ function Testimonials() {
                             name={ testimonial.name }
                             rating={ testimonial.rating }
                             text={ testimonial.text }
+                            key={ testimonial.name }
                         />
                     ))}
                 </div>

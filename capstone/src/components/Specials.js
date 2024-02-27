@@ -50,6 +50,7 @@ function Specials() {
                         dish={ dish.dish }
                         price={ dish.price }
                         description={ dish.description }
+                        key={ dish.dish }
                     />
                 ))}
             </div>

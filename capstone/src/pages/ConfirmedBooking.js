@@ -1,6 +1,6 @@
 
 
-function ConfirmedBooking({ userEmail }) {
+function ConfirmedBooking({ userEmail, init }) {
     return (
         <div class="content">
             <h1>Reservation</h1>
