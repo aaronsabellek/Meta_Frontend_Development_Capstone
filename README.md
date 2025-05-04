@@ -1,3 +1,8 @@
+# Little Lemon Web-App
+A restaurant website built with React including a table reservation feature. Final project of the "Meta Front-End Developer Professional Certificate" at Coursera. 
+
+### https://little-lemon-restaurant-vrm3.onrender.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
